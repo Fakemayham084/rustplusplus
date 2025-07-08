@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Info App</title>
+    <title>Rust Server Info</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Team Dashboard</h1>
+    <div class="container">
+        <header>
+            <h1>Rust Server Dashboard</h1>
         </header>
         
-        <main class="app-content">
-            <div class="image-container">
-                <img id="team-logo" src="team-logo.png" alt="Team Logo">
+        <div class="time-info">
+            <h2>Current Time: <span id="current-time">--:--:--</span></h2>
+            <p>Sunrise: <span id="sunrise">07:21</span></p>
+            <p>Sunset: <span id="sunset">19:42</span></p>
+            <p>Day Length: <span id="day-length">741</span> minutes</p>
+            <p>Night Length: <span id="night-length">699</span> minutes</p>
+        </div>
+        
+        <div class="server-info">
+            <h2>--- Server Info ---</h2>
+            <p>Server Name: <span id="server-name">SriBull YouTube Test Server 2024</span></p>
+            <p>Map: <span id="map-type">Procedural Map</span></p>
+            <p>Size: <span id="map-size">1500</span></p>
+            <p>Players: <span id="player-count">1</span>/<span id="max-players">10</span> (Queued: <span id="queued">0</span>)</p>
+            <p>Seed: <span id="seed">9876513</span></p>
+        </div>
+        
+        <div class="team-info">
+            <h2>--- Team Info for <span id="team-name">Barack Obama</span> ---</h2>
+            <p>Leader: <span id="leader-id">76561199013312261</span></p>
+            <div id="team-members">
+                <p>[<span class="steam-id">76561199013312261</span>] <span class="player-name">Barack Obama</span> - 
+                <span class="status">Online</span>, <span class="alive-status">Alive</span> at
+                (<span class="coordinates">165.1, -126.6</span>)</p>
             </div>
-            
-            <div class="info-box">
-                <h2>Server Information</h2>
-                <div id="server-info">Loading server info...</div>
-            </div>
-            
-            <div class="info-box">
-                <h2>Current Time</h2>
-                <div id="current-time">--:--:--</div>
-            </div>
-            
-            <div class="info-box">
-                <h2>Team Information</h2>
-                <div id="team-info">Loading team info...</div>
-            </div>
-        </main>
+        </div>
     </div>
     
     <script src="app.js"></script>
